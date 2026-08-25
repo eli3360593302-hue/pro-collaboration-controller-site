@@ -25,6 +25,10 @@ You keep control of the goal and material authorization. The Controller manages 
 
 你只需要说明最终目标、限制和必要授权。Controller 会在可用工具范围内自动安排 Pro 对话、发送精简任务、收取结果、要求修改、停止错误路线，并把已接受成果交给下一位 Pro。
 
+> 你和 Pro 配合，把这个任务做完。
+
+就这么简单。你不需要先决定用几个 Pro，也不需要自己安排分工、复核、上下文压缩或对话交接。
+
 它不会把完整历史反复塞给每个对话，而只传递已接受事实、未决问题、关键证据、失败路线的准确阻碍和唯一下一步。这可以减少重复上下文、重复工作和无效等待。
 
 ## Honest automation boundaries
