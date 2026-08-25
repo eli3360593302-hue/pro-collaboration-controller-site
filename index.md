@@ -25,6 +25,10 @@ You keep control of the goal and material authorization. The Controller manages 
 
 “Work with Pro to finish this task” starts the smallest useful route: one verified Chat + Pro conversation, one compact task, one result, and at most one repair. Multiple Pro roles, Projects, research gates, route audits, handoffs, Goals, and Scheduled Tasks activate only when an observed trigger requires them.
 
+## No protocol forms
+
+Users speak naturally. Internal task cards, IDs, hashes, and YAML are compiled and validated by the Controller, not filled in by the user. Even when a research search escalates one real blind spot to Pro, the default interface shows only the plain-language action, obstruction, or audited result.
+
 ## 不用再充当多个 Pro 之间的“人工传话员”
 
 你只需要说明最终目标、限制和必要授权。Controller 会在可用工具范围内自动安排 Pro 对话、发送精简任务、收取结果、要求修改、停止错误路线，并把已接受成果交给下一位 Pro。
