@@ -5,30 +5,35 @@ title: Pro Collaboration Controller
 
 ![Pro Collaboration Controller logo](logo.png)
 
-**Pro Collaboration Controller** coordinates a user's own subscription ChatGPT
-Pro chats for long research, mathematical reasoning, planning, review, and
-independent critique.
+# Give the Controller the objective. Stop managing every Pro chat yourself.
 
-它把用户自己的订阅版 ChatGPT Pro 对话作为可复用计算资源。Controller 负责锁定根
-目标、给不同角色传递最少必要上下文、记录实际返回结果，并在对话过长前生成可恢复交接。
+**Pro Collaboration Controller automates the coordination around your own subscription ChatGPT Pro.** After you authorize one objective, it can prepare compact tasks, route work to suitable Pro conversations, observe progress, collect results, decide the next action, and create recoverable handoffs when the host exposes the required tools.
 
-## What it does
+You keep control of the goal and material authorization. The Controller manages the collaboration. Pro performs the substantive work.
 
-- routes bounded tasks across planning, solving, critique, and acceptance roles;
-- compresses accepted context instead of repeatedly sending the full history;
-- records observable model and result identity without inventing unavailable evidence;
-- avoids wasteful high-frequency polling;
-- stops when Pro is unavailable unless the user explicitly authorizes a named fallback;
-- labels every authorized non-Pro or API result as non-Pro and records its model,
-  cost, and data boundary where observable.
+## What it automates
 
-The plugin does not include a ChatGPT Pro subscription. It does not promise a
-fixed token-saving percentage, a particular model route, or correct research
-results. Important outputs must be reviewed before use.
+- understands the deliverable, constraints, and acceptance conditions;
+- assigns planning, worker, challenge, specialist, and review roles;
+- creates or reuses suitable Pro conversations when the product surface permits;
+- sends minimum-context task cards and avoids copying the full history;
+- observes progress without wasteful high-frequency polling;
+- accepts, revises, stops, or hands off returned candidate work;
+- preserves accepted facts, closed routes, and exactly one next action.
 
-This is an independently developed third-party plugin. It is not made,
-supported, certified, or endorsed by OpenAI. ChatGPT, Codex, OpenAI, and related
-marks belong to their respective owners.
+## 不用再充当多个 Pro 之间的“人工传话员”
+
+你只需要说明最终目标、限制和必要授权。Controller 会在可用工具范围内自动安排 Pro 对话、发送精简任务、收取结果、要求修改、停止错误路线，并把已接受成果交给下一位 Pro。
+
+它不会把完整历史反复塞给每个对话，而只传递已接受事实、未决问题、关键证据、失败路线的准确阻碍和唯一下一步。这可以减少重复上下文、重复工作和无效等待。
+
+## Honest automation boundaries
+
+This is a skills-only controller, not an independent always-on server. It prefers first-party thread tools for established conversations and uses the browser only for remaining product-UI gaps such as new-chat creation, Pro selection, a first message, or an unavailable attachment download. If an operation cannot be performed, it produces a manual handoff instead of claiming success.
+
+The plugin never silently substitutes a non-Pro model or paid API. Any fallback requires explicit authorization and an execution receipt. It does not promise a fixed token-saving percentage, a particular internal model identity, or correct research results. Pro outputs remain candidate work that must be checked before consequential use.
+
+This is an independently developed third-party plugin. It is not made, supported, certified, or endorsed by OpenAI. ChatGPT, Codex, OpenAI, and related marks belong to their respective owners.
 
 ## Public documents
 
@@ -38,4 +43,3 @@ marks belong to their respective owners.
 - [Personal and Evaluation License 1.0](license.txt)
 
 Publisher: **knockknock-hoho**
-
