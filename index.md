@@ -21,6 +21,10 @@ You keep control of the goal and material authorization. The Controller manages 
 - accepts, revises, stops, or hands off returned candidate work;
 - preserves accepted facts, closed routes, and exactly one next action.
 
+## Fast by default
+
+“Work with Pro to finish this task” starts the smallest useful route: one verified Chat + Pro conversation, one compact task, one result, and at most one repair. Multiple Pro roles, Projects, research gates, route audits, handoffs, Goals, and Scheduled Tasks activate only when an observed trigger requires them.
+
 ## 不用再充当多个 Pro 之间的“人工传话员”
 
 你只需要说明最终目标、限制和必要授权。Controller 会在可用工具范围内自动安排 Pro 对话、发送精简任务、收取结果、要求修改、停止错误路线，并把已接受成果交给下一位 Pro。
@@ -33,7 +37,9 @@ You keep control of the goal and material authorization. The Controller manages 
 
 ## Honest automation boundaries
 
-This is a skills-only controller, not an independent always-on server. It prefers first-party thread tools for established conversations and uses the browser only for remaining product-UI gaps such as new-chat creation, Pro selection, a first message, or an unavailable attachment download. If an operation cannot be performed, it produces a manual handoff instead of claiming success.
+The decision core remains a lightweight Skill, not an independent 24/7 server. For authorized work that must resume later, it prefers a real completion event and may use one same-chat Scheduled Task when the host supports it. A wake-up can only read status and decide; it never sends or resends the task. Unobservable state fails closed.
+
+It prefers first-party thread tools for established conversations and uses the browser only for remaining product-UI gaps such as new-chat creation, Pro selection, a first message, or an unavailable attachment download. If an operation cannot be performed, it produces a manual handoff instead of claiming success.
 
 The plugin never silently substitutes a non-Pro model or paid API. Any fallback requires explicit authorization and an execution receipt. It does not promise a fixed token-saving percentage, a particular internal model identity, or correct research results. Pro outputs remain candidate work that must be checked before consequential use.
 
