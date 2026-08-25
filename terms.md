@@ -27,8 +27,8 @@ agreement. The Plugin does not include or guarantee a ChatGPT Pro subscription,
 API access, model availability, usage allowance, or paid third-party service.
 
 ChatGPT, Codex, OpenAI, and related marks belong to their respective owners.
-The Plugin is independently developed and is not represented as endorsed by
-OpenAI unless an official listing expressly says otherwise.
+The Plugin is independently developed and is not made, supported, certified,
+or endorsed by OpenAI. Directory availability does not imply endorsement.
 
 ## 3. User authorization and responsibility
 

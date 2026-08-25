@@ -91,8 +91,9 @@ interest not expressly granted by this license.
 
 This license does not grant rights to any product name, logo, domain, or
 trademark. ChatGPT, Codex, OpenAI, and related marks belong to their respective
-owners. The Software is independently developed and is not represented as
-endorsed by OpenAI unless an official listing expressly says otherwise.
+owners. The Software is independently developed and is not made, supported,
+certified, or endorsed by OpenAI. Directory availability does not imply
+endorsement.
 
 6. Third-Party Services
 
