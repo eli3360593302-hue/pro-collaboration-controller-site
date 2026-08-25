@@ -1,0 +1,139 @@
+PRO COLLABORATION CONTROLLER
+PERSONAL AND EVALUATION LICENSE 1.0
+
+Effective date: 25 August 2026
+
+Copyright (c) 2026 knockknock-hoho. All rights reserved.
+
+This is a proprietary, source-available license. It is not an open-source
+license.
+
+1. Definitions
+
+"Software" means the version of Pro Collaboration Controller carrying
+this license, including its plugin manifest, skills, instructions,
+documentation, and other accompanying materials.
+
+"Licensor" means knockknock-hoho.
+
+"Personal Use" means use by a natural person on their own behalf for personal,
+non-commercial work, study, hobby activity, or independent research. An
+individual student or researcher may use the Software for their own academic
+work even when affiliated with an educational institution, provided the
+Software is not centrally deployed by that institution, used to provide paid
+services, or incorporated into an institutional product or service.
+
+"Evaluation Use" means internal testing by a person or organization for no more
+than 30 consecutive calendar days beginning on first installation, solely to
+decide whether to obtain a commercial license. Evaluation Use does not include
+production use, client work, service delivery, or revenue-generating activity.
+
+"Commercial Use" means any use outside Personal Use or Evaluation Use,
+including use for an employer's production operations, organization-wide
+deployment, paid consulting, client delivery, a hosted or managed service,
+resale, or a revenue-generating product or service.
+
+2. License Grant
+
+Subject to these terms, the Licensor grants you a limited, non-exclusive,
+non-transferable, non-sublicensable, royalty-free license to:
+
+a. install and run unmodified official copies of the Software for Personal Use;
+
+b. install and run unmodified official copies for Evaluation Use; and
+
+c. make only the temporary, cached, backup, or other technical copies
+reasonably necessary for those permitted uses.
+
+You may inspect material exposed by a supported platform only as reasonably
+necessary to understand and use the official Software. No other rights are
+granted.
+
+3. Restrictions
+
+Except where applicable law gives you a right that cannot be restricted, you
+may not:
+
+a. modify, translate, adapt, merge, or create derivative works of the Software;
+
+b. publish, distribute, sublicense, sell, rent, lease, transfer, mirror,
+repackage, white-label, or make the Software available to another person;
+
+c. provide the Software or a substantial set of its functionality as a hosted,
+managed, consulting, outsourcing, or software-as-a-service offering;
+
+d. use the Software for Commercial Use without a separate written commercial
+license from the Licensor;
+
+e. copy or adapt protected expression, instructions, workflow text, or other
+substantial portions of the Software to create or improve a competing product;
+
+f. use the Software or substantial portions of it as training, fine-tuning, or
+evaluation data for another model or product, except for transient processing
+strictly necessary to run the Software through an authorized platform;
+
+g. remove, alter, or obscure copyright, license, attribution, or trademark
+notices; or
+
+h. circumvent a technical or contractual restriction applied to the Software.
+
+4. Commercial Licensing
+
+Commercial Use requires a separate written agreement signed or otherwise
+expressly issued by the Licensor. Payment, discussion, or access to a copy does
+not by itself grant commercial rights. See COMMERCIAL-LICENSING.md for a
+non-binding description of the commercial route.
+
+5. Ownership and Trademarks
+
+The Software is licensed, not sold. The Licensor retains all rights, title, and
+interest not expressly granted by this license.
+
+This license does not grant rights to any product name, logo, domain, or
+trademark. ChatGPT, Codex, OpenAI, and related marks belong to their respective
+owners. The Software is independently developed and is not represented as
+endorsed by OpenAI unless an official listing expressly says otherwise.
+
+6. Third-Party Services
+
+The Software may operate through OpenAI products or other third-party services.
+Your use of those services is governed separately by their terms and policies.
+This license grants no right to any third-party service, account, model, data,
+or content.
+
+7. Versions and Updates
+
+This license applies only to a version distributed with it. A later version may
+carry different terms. Installing an update does not retroactively change the
+license attached to an earlier version.
+
+8. Termination
+
+Your rights under this license terminate automatically if you breach these
+terms. On termination, you must stop using the Software and delete all copies
+under your control, except copies you must retain by law. The Licensor may
+restore permission in writing. Sections concerning ownership, restrictions,
+disclaimers, liability, and prior versions survive termination where
+applicable.
+
+9. Disclaimer
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS PROVIDED
+"AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+EXPRESS OR IMPLIED. THE LICENSOR DOES NOT WARRANT THAT THE SOFTWARE, ANY MODEL,
+ANY THIRD-PARTY SERVICE, OR ANY GENERATED RESULT WILL BE AVAILABLE, ACCURATE,
+COMPLETE, SECURE, OR FIT FOR A PARTICULAR PURPOSE.
+
+10. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSOR WILL NOT BE
+LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE
+DAMAGES, OR FOR LOSS OF DATA, PROFITS, REVENUE, BUSINESS, OR OPPORTUNITY,
+ARISING FROM THE SOFTWARE OR THESE TERMS. NOTHING IN THIS LICENSE EXCLUDES OR
+LIMITS LIABILITY THAT CANNOT LAWFULLY BE EXCLUDED OR LIMITED.
+
+11. Entire License
+
+This document is the entire copyright license for Personal Use and Evaluation
+Use of this version. A commercial agreement may grant different rights and, for
+the scope it covers, will control over this license.
