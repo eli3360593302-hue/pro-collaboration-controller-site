@@ -29,6 +29,10 @@ You keep control of the goal and material authorization. The Controller manages 
 
 Users speak naturally. Internal task cards, IDs, hashes, and YAML are compiled and validated by the Controller, not filled in by the user. Even when a research search escalates one real blind spot to Pro, the default interface shows only the plain-language action, obstruction, or audited result.
 
+## Search again only when the research changes
+
+The plugin bundles an independent prior-work search method. During long research, a new object, assumption, failed route, recurring obstruction, handoff, or novelty claim triggers a history-first recheck. Unchanged questions reuse prior evidence; changed cells receive delta-only search; genuinely new propositions receive one linked successor. Time passing alone never triggers a search.
+
 ## 不用再充当多个 Pro 之间的“人工传话员”
 
 你只需要说明最终目标、限制和必要授权。Controller 会在可用工具范围内自动安排 Pro 对话、发送精简任务、收取结果、要求修改、停止错误路线，并把已接受成果交给下一位 Pro。
