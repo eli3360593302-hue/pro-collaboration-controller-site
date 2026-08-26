@@ -8,7 +8,7 @@ permalink: /terms.html
 
 Effective date: 25 August 2026
 
-These terms apply to the official Pro Collaboration Controller plugin
+These terms apply to the official Collaboration Controller plugin
 distributed by knockknock-hoho (the "Plugin"). By installing or using the
 Plugin, you agree to these terms to the extent permitted by applicable law.
 

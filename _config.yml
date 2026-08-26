@@ -1,8 +1,7 @@
-title: Pro Collaboration Controller
+title: Collaboration Controller
 description: Compact coordination for subscription Pro chats
 theme: minima
 header_pages:
   - privacy.md
   - terms.md
   - support.md
-

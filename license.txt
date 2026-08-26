@@ -10,7 +10,7 @@ license.
 
 1. Definitions
 
-"Software" means the version of Pro Collaboration Controller carrying
+"Software" means the version of Collaboration Controller carrying
 this license, including its plugin manifest, skills, instructions,
 documentation, and other accompanying materials.
 

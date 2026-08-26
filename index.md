@@ -1,58 +1,488 @@
 ---
 layout: home
-title: Pro Collaboration Controller
+title: Collaboration Controller
 ---
 
-![Pro Collaboration Controller logo](logo.png)
+# Collaboration Controller
 
-# Give the Controller one objective. It manages Pro—and knows when research should search again.
+## 让 Codex 不只完成一步，而是把整个任务推进到结果
 
-**Pro Collaboration Controller automates the coordination around your own subscription ChatGPT Pro.** After you authorize one objective, it can prepare compact tasks, route work to suitable Pro conversations, observe progress, collect results, decide the next action, and create recoverable handoffs when the host exposes the required tools. During long research, it also rechecks prior work when the mathematical or technical problem materially changes—without repeatedly searching an unchanged question.
+**你只需要告诉 Codex 最终要什么，不需要自己管理中间每一步。**
 
-You keep control of the goal and material authorization. The Controller manages the collaboration. Pro performs the substantive work.
+Codex 很擅长写代码、研究问题、修改文件和处理具体任务。
 
-## What it automates
+但任务一旦变复杂，你往往还是需要自己做很多“管理工作”：
 
-- understands the deliverable, constraints, and acceptance conditions;
-- assigns planning, worker, challenge, specialist, and review roles;
-- creates or reuses suitable Pro conversations when the product surface permits;
-- sends minimum-context task cards and avoids copying the full history;
-- observes progress without wasteful high-frequency polling;
-- accepts, revises, stops, or hands off returned candidate work;
-- re-enters prior-work search only after a material research change;
-- preserves accepted facts, closed routes, and exactly one next action.
+- 判断下一步应该做什么；
+- 把大任务拆成几个阶段；
+- 检查结果有没有遗漏；
+- 要求它修改不合格的部分；
+- 重新解释前面已经发生了什么；
+- 在不同工作之间传递上下文；
+- 决定什么时候继续，什么时候停止；
+- 长任务隔一段时间后，再回来重新接上。
 
-## Fast by default
+**Collaboration Controller 把这部分工作交给 Codex 自己管理。**
 
-“Work with Pro to finish this task” starts the smallest useful route: one verified Chat + Pro conversation, one compact task, one result, and at most one repair. Multiple Pro roles, Projects, research gates, route audits, handoffs, Goals, and Scheduled Tasks activate only when an observed trigger requires them.
+你负责告诉 Codex：
 
-## No protocol forms
+**我要什么。**
 
-Users speak naturally. Internal task cards, IDs, hashes, and YAML are compiled and validated by the Controller, not filled in by the user. Even when a research search escalates one real blind spot to Pro, the default interface shows only the plain-language action, obstruction, or audited result.
+Controller 负责让 Codex持续知道：
 
-## Search again only when the research changes
+**现在做到哪里、什么已经确认、还有什么没解决、接下来唯一该做什么。**
 
-The plugin bundles an independent prior-work search method. During long research, a new object, assumption, failed route, recurring obstruction, handoff, or novelty claim triggers a history-first recheck. Unchanged questions reuse prior evidence; changed cells receive delta-only search; genuinely new propositions receive one linked successor. Time passing alone never triggers a search.
+---
 
-## 不用再充当多个 Pro 之间的“人工传话员”
+## 一个目标进去，Codex 自己组织过程
 
-你只需要说明最终目标、限制和必要授权。Controller 会在可用工具范围内自动安排 Pro 对话、发送精简任务、收取结果、要求修改、停止错误路线，并把已接受成果交给下一位 Pro。长期研究中，它还会在假设、失败路线或命题真正变化时主动增量搜索；问题没变就复用已有证据。
+最简单的用法不需要学习任何新概念。
 
-> 你和 Pro 配合，把这个任务做完。
+你可以直接说：
 
-就这么简单。你不需要先决定用几个 Pro，也不需要自己安排分工、复核、上下文压缩或对话交接。
+> 把这个功能做完，包括检查和修复。
 
-它不会把完整历史反复塞给每个对话，而只传递已接受事实、未决问题、关键证据、失败路线的准确阻碍和唯一下一步。这可以减少重复上下文、重复工作和无效等待。
+或者：
 
-## Honest automation boundaries
+> 研究这个问题，最后给我一个可靠结论。
 
-The decision core remains a lightweight Skill, not an independent 24/7 server. For authorized work that must resume later, it prefers a real completion event and may use one same-chat Scheduled Task when the host supports it. A wake-up can only read status and decide; it never sends or resends the task. Unobservable state fails closed.
+或者：
 
-It prefers first-party thread tools for established conversations and uses the browser only for remaining product-UI gaps such as new-chat creation, Pro selection, a first message, or an unavailable attachment download. If an operation cannot be performed, it produces a manual handoff instead of claiming success.
+> 继续推进这个项目，直到遇到真正需要我决定的事情。
 
-The plugin never silently substitutes a non-Pro model or paid API. Any fallback requires explicit authorization and an execution receipt. It does not promise a fixed token-saving percentage, a particular internal model identity, or correct research results. Pro outputs remain candidate work that must be checked before consequential use.
+然后 Controller 会根据任务复杂度决定接下来需要什么。
 
-This is an independently developed third-party plugin. It is not made, supported, certified, or endorsed by OpenAI. ChatGPT, Codex, OpenAI, and related marks belong to their respective owners.
+一个简单任务可能只是：
+
+**理解目标 → 完成工作 → 检查结果 → 交付**
+
+一个复杂任务可能变成：
+
+**分析 → 实现 → 测试 → 发现问题 → 修订 → 再检查 → 交付**
+
+一个研究任务可能是：
+
+**确定问题 → 查已有工作 → 推导 → 找反例 → 复核 → 收敛结论**
+
+这些流程不需要你提前设计。
+
+**你给目标，Codex 自己组织完成路径。**
+
+---
+
+## 你不再需要当 Codex 的项目经理
+
+没有 Controller 时，复杂任务很容易变成：
+
+**你提要求 → Codex 做一步 → 你看结果 → 决定下一步 → 再告诉 Codex → 再检查 → 再纠正……**
+
+真正消耗精力的，往往不是每一步本身，而是中间这些协调工作。
+
+Controller 的目标就是把它变成：
+
+**你提出总目标 → Codex持续推进 → 真正需要你时再回来**
+
+也就是说，你不需要反复告诉它：
+
+- “现在继续下一步。”
+- “前面这个已经做过了。”
+- “不要再走刚才失败的路线。”
+- “把这个结果交给下一步。”
+- “先检查一下是不是对的。”
+- “如果不行就修改一次。”
+- “别重新研究已经解决的问题。”
+
+这些都应该成为 Controller 的工作。
+
+---
+
+## 简单任务保持简单
+
+Controller 不会把每一个请求都变成庞大的 AI 工作流。
+
+普通任务默认走最短路径：
+
+**理解任务 → 完成 → 检查 → 返回结果**
+
+如果第一次结果已经满足要求，就结束。
+
+它不会为了“自动化”而自动制造：
+
+- 很多角色；
+- 很多对话；
+- 多轮审查；
+- 大量搜索；
+- 复杂任务卡；
+- 长链交接；
+- 无限修改。
+
+只有当任务真的需要时，它才升级。
+
+例如：
+
+- 第一次结果没有达到要求；
+- 出现互相冲突的结论；
+- 关键约束被遗漏；
+- 需要独立验证；
+- 需要判断已有研究是否已经解决问题；
+- 工作需要跨较长时间继续；
+- 当前能力不足以可靠完成任务。
+
+**复杂度由问题决定，而不是由 Controller 的存在决定。**
+
+---
+
+## Codex 会一直知道“现在在哪里”
+
+长任务最大的麻烦之一，是状态会逐渐丢失。
+
+做了几十步以后，真正重要的信息可能只剩几件：
+
+- 哪些事实已经确认；
+- 哪些工作已经完成；
+- 哪些路线已经证明走不通；
+- 现在还有什么没解决；
+- 下一步究竟是什么。
+
+Controller 会持续维护这部分状态。
+
+它不会把整个历史无限堆积，而是尽量保留：
+
+**已接受的事实  
+未解决的问题  
+关键证据  
+失败路线及失败原因  
+当前唯一下一步**
+
+所以任务越长，Controller 的价值通常越明显。
+
+它的作用不是单纯“记住更多东西”。
+
+而是：
+
+**记住真正影响下一步的东西。**
+
+---
+
+## 不再反复搬运整段上下文
+
+传统的长任务很容易出现一个问题：
+
+每进入下一阶段，就把前面的完整历史再塞进去一次。
+
+结果往往是：
+
+- 已解决的问题被重新讨论；
+- 旧错误再次出现；
+- 新任务被大量无关内容淹没；
+- 上下文越来越长；
+- 实际有效信息却没有同比增加。
+
+Controller 默认只把下一步真正需要的信息带过去。
+
+例如一个实现任务完成以后，后面的检查阶段不一定需要重新知道最初几十轮讨论的全部内容。
+
+它可能只需要知道：
+
+**我们要实现什么  
+已经改了什么  
+验收标准是什么  
+目前哪里最值得检查**
+
+这种上下文压缩，让 Codex 更像是在维护一个持续运行的工作状态，而不是不断重新阅读聊天记录。
+
+---
+
+## 长期研究不会反复从头开始
+
+对于数学、技术研究、架构设计这类长期任务，Controller 还会维护已经检查过的研究范围。
+
+如果问题没有变化：
+
+**复用已有结论。**
+
+如果只有一部分变化：
+
+**只检查变化部分。**
+
+只有出现真正的新情况时才重新展开搜索，例如：
+
+- 研究对象改变；
+- 关键假设改变；
+- 原路线失败；
+- 出现新的命题；
+- 需要确认一个新的创新性声明；
+- 旧结论已经不足以支持当前判断。
+
+它不会因为任务持续了很久，就定期把同一个问题再搜一遍。
+
+目标不是“搜索更多”。
+
+而是：
+
+**只在新信息可能改变决策时重新搜索。**
+
+---
+
+## 它会检查结果，而不是只负责继续
+
+自动推进并不等于不断往前跑。
+
+Controller 每完成一个阶段，都需要判断结果属于哪一种情况：
+
+**接受  
+修改  
+停止  
+换路线  
+交给下一步**
+
+例如：
+
+如果实现已经满足验收条件，就不需要再制造额外工作。
+
+如果结果基本正确但漏了一项要求，可以只修一次。
+
+如果路线本身错误，就应该停止，而不是在错误方向上继续追加工作。
+
+如果当前信息不足以判断，也不应该假装已经完成。
+
+所以 Controller 的目标不是：
+
+**让 Codex 做更多步骤。**
+
+而是：
+
+**让 Codex做尽可能少、但足够完成目标的步骤。**
+
+---
+
+## 真正需要额外能力时，Codex 可以自己组织
+
+有些任务一个执行过程就能完成。
+
+有些任务则可能需要：
+
+- 独立复核；
+- 第二种推理路线；
+- 外部搜索；
+- 更强的模型能力；
+- 不同上下文中的独立判断；
+- 专门工具；
+- 延迟一段时间后重新检查状态。
+
+这些都应该是 Controller 根据任务需要调用的能力。
+
+用户不需要提前知道背后具体用了几个模型、几个对话或者什么内部角色。
+
+对用户而言，仍然只是：
+
+**我把任务交给 Codex。**
+
+只有当这些执行细节会影响费用、隐私、授权或最终结论时，Controller 才需要把它们暴露出来。
+
+---
+
+## 如果你拥有 ChatGPT Pro，它也可以成为一种资源
+
+对于高级任务，Controller 可以在宿主环境支持的情况下，把用户已有的 ChatGPT Pro 能力作为额外的高质量计算资源。
+
+例如：
+
+- 让一个独立 Pro 检查关键结论；
+- 让另一个上下文重新攻击一个证明；
+- 让 Pro 完成主体研究，再由 Codex 管理后续工作；
+- 在不同阶段调用不同能力。
+
+但这是 **Controller 的执行方式**，不是用户使用产品前必须理解的概念。
+
+你不需要先知道：
+
+“这个任务是不是应该用 Pro？”
+
+也不需要决定：
+
+“应该开几个 Pro？”
+
+你仍然只需要说：
+
+> 把这个任务做完。
+
+Controller 再判断是否需要额外资源。
+
+---
+
+## 自动推进，但不会偷偷替你做决定
+
+Controller 可以自动处理已经授权范围内的工作，但不会把“自动化”理解成无限授权。
+
+如果一个新的步骤会改变重要边界，例如：
+
+- 产生额外费用；
+- 使用新的外部服务；
+- 把数据发送到新的地方；
+- 切换到明显不同的执行方式；
+- 做不可逆操作；
+- 需要新的用户判断；
+
+它应该回来询问你。
+
+它的原则是：
+
+**能在已有授权里继续，就继续。  
+需要新授权，就停下来问。**
+
+---
+
+## 长任务可以稍后继续，但不会重复执行
+
+有些任务需要等待：
+
+- 一个长时间运行的操作完成；
+- 一个结果产生；
+- 一个外部状态发生变化；
+- 稍后再回来检查。
+
+如果宿主环境支持，Controller 可以利用完成事件或 Scheduled Task 在之后重新检查任务状态。
+
+但这种“唤醒”只用于：
+
+**观察已经发生了什么，并决定下一步。**
+
+它不会因为重新醒来，就再次发送原任务。
+
+如果当前状态不明确，它会停止，而不是冒险重复执行。
+
+这能避免长任务里最危险的一类自动化错误：
+
+**同一件事被做两遍。**
+
+---
+
+## 工具做不到时，它会明确停下来
+
+Controller 不会假装拥有不存在的能力。
+
+能够直接完成的步骤，它直接完成。
+
+只能通过浏览器完成的步骤，在能力允许时再通过浏览器完成。
+
+如果某一步当前确实无法自动完成，它会明确告诉你：
+
+**哪里被阻塞  
+为什么不能继续  
+你需要做什么**
+
+而不是伪造：
+
+- “已经发送”；
+- “已经完成”；
+- “已经验证”。
+
+自动化的前提是现实能力，而不是流程图看起来完整。
+
+---
+
+## Codex 的结果仍然需要证据
+
+Controller 能让工作组织得更好，但它不会把一次模型输出自动包装成事实。
+
+一个结果是否可信，仍然取决于任务本身需要什么证据。
+
+例如：
+
+代码可能需要测试。
+
+数学结论可能需要证明。
+
+研究结论可能需要来源。
+
+架构决策可能需要约束和反例检查。
+
+Controller 的作用是确保这些验收步骤真正发生，而不是用一句：
+
+**“AI 已经确认。”**
+
+来代替它们。
+
+---
+
+## 什么时候最有价值？
+
+它特别适合那些：
+
+**不是做一步，而是需要持续推进到完成的任务。**
+
+例如：
+
+- 完成一个软件功能并测试；
+- 修复一个复杂 bug；
+- 重构一个代码库；
+- 研究一个技术问题；
+- 推进数学证明；
+- 做文献和已有工作检查；
+- 设计系统架构；
+- 比较多个方案并作出决策；
+- 持续推进一个长期项目；
+- 对重要结果进行独立验证。
+
+如果只是问：
+
+> Python 怎么把字符串转成整数？
+
+直接让 Codex 回答就够了。
+
+但如果是：
+
+> 把这个模块重构掉，保持兼容，补测试，检查有没有遗漏，完成后告诉我。
+
+这就是 Controller 真正开始有价值的地方。
+
+---
+
+## 你不需要学习 Controller
+
+理想情况下，用户甚至不需要经常想到它的存在。
+
+你不需要学习：
+
+- 工作流 DSL；
+- YAML；
+- task ID；
+- role ID；
+- 哈希；
+- 内部状态机；
+- 对话调度协议；
+- 上下文交接格式。
+
+这些属于内部实现和高级审计能力。
+
+普通使用应该仍然像使用 Codex 一样简单。
+
+你只需要说：
+
+> 把这个做完。
+
+> 检查完再交给我。
+
+> 继续推进，只有真正需要我决定的时候再问。
+
+> 研究清楚以后给我最终结论。
+
+剩下的组织工作交给 Controller。
+
+---
+
+# 一句话理解
+
+**Codex 原本很擅长完成工作。**
+
+**Collaboration Controller 让 Codex也开始管理工作。**
+
+你告诉它最终要什么。
+
+它负责记住状态、安排下一步、检查结果、必要时调用更多能力，并把复杂任务持续推进到完成。
+
+---
 
 ## Public documents
 
@@ -62,3 +492,4 @@ This is an independently developed third-party plugin. It is not made, supported
 - [Personal and Evaluation License 1.0](license.txt)
 
 Publisher: **knockknock-hoho**
+
