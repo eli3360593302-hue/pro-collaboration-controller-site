@@ -5,9 +5,9 @@ title: Pro Collaboration Controller
 
 ![Pro Collaboration Controller logo](logo.png)
 
-# Give the Controller the objective. Stop managing every Pro chat yourself.
+# Give the Controller one objective. It manages Pro—and knows when research should search again.
 
-**Pro Collaboration Controller automates the coordination around your own subscription ChatGPT Pro.** After you authorize one objective, it can prepare compact tasks, route work to suitable Pro conversations, observe progress, collect results, decide the next action, and create recoverable handoffs when the host exposes the required tools.
+**Pro Collaboration Controller automates the coordination around your own subscription ChatGPT Pro.** After you authorize one objective, it can prepare compact tasks, route work to suitable Pro conversations, observe progress, collect results, decide the next action, and create recoverable handoffs when the host exposes the required tools. During long research, it also rechecks prior work when the mathematical or technical problem materially changes—without repeatedly searching an unchanged question.
 
 You keep control of the goal and material authorization. The Controller manages the collaboration. Pro performs the substantive work.
 
@@ -19,6 +19,7 @@ You keep control of the goal and material authorization. The Controller manages 
 - sends minimum-context task cards and avoids copying the full history;
 - observes progress without wasteful high-frequency polling;
 - accepts, revises, stops, or hands off returned candidate work;
+- re-enters prior-work search only after a material research change;
 - preserves accepted facts, closed routes, and exactly one next action.
 
 ## Fast by default
@@ -35,7 +36,7 @@ The plugin bundles an independent prior-work search method. During long research
 
 ## 不用再充当多个 Pro 之间的“人工传话员”
 
-你只需要说明最终目标、限制和必要授权。Controller 会在可用工具范围内自动安排 Pro 对话、发送精简任务、收取结果、要求修改、停止错误路线，并把已接受成果交给下一位 Pro。
+你只需要说明最终目标、限制和必要授权。Controller 会在可用工具范围内自动安排 Pro 对话、发送精简任务、收取结果、要求修改、停止错误路线，并把已接受成果交给下一位 Pro。长期研究中，它还会在假设、失败路线或命题真正变化时主动增量搜索；问题没变就复用已有证据。
 
 > 你和 Pro 配合，把这个任务做完。
 
