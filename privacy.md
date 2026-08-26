@@ -9,7 +9,7 @@ permalink: /privacy.html
 Effective date: 26 August 2026
 
 This notice describes the current skills-only release of Collaboration
-Controller distributed by knockknock-hoho.
+Controller distributed by Eli Brad under the knockknock-hoho project brand.
 
 ## Publisher data collection
 

@@ -3,7 +3,7 @@ PERSONAL AND EVALUATION LICENSE 1.0
 
 Effective date: 25 August 2026
 
-Copyright (c) 2026 knockknock-hoho. All rights reserved.
+Copyright (c) 2026 Eli Brad. All rights reserved.
 
 This is a proprietary, source-available license. It is not an open-source
 license.
@@ -14,7 +14,7 @@ license.
 this license, including its plugin manifest, skills, instructions,
 documentation, and other accompanying materials.
 
-"Licensor" means knockknock-hoho.
+"Licensor" means Eli Brad.
 
 "Personal Use" means use by a natural person on their own behalf for personal,
 non-commercial work, study, hobby activity, or independent research. An

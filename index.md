@@ -501,5 +501,6 @@ Controller 的作用是确保这些验收步骤真正发生，而不是用一句
 - [Support](support.html)
 - [Personal and Evaluation License 1.0](license.txt)
 
-Publisher: **knockknock-hoho**
+Publisher: **Eli Brad**  
+Project brand: **knockknock-hoho**
 
