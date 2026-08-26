@@ -6,9 +6,9 @@ permalink: /privacy.html
 
 # Privacy Notice
 
-Effective date: 25 August 2026
+Effective date: 26 August 2026
 
-This notice describes the current skills-only release of Pro Collaboration
+This notice describes the current skills-only release of Collaboration
 Controller distributed by knockknock-hoho.
 
 ## Publisher data collection

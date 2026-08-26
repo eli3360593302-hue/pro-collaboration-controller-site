@@ -6,7 +6,7 @@ permalink: /terms.html
 
 # End User Terms
 
-Effective date: 25 August 2026
+Effective date: 26 August 2026
 
 These terms apply to the official Collaboration Controller plugin
 distributed by knockknock-hoho (the "Plugin"). By installing or using the
