@@ -58,7 +58,7 @@ model identity, continuity, latency, token savings, or results.
 
 ## 6. Privacy
 
-The current skills-only release is described in the [Privacy Notice](privacy.html).
+The current release and optional personal-staging telemetry boundary are described in the [Privacy Notice](privacy.html).
 Connected services process data under their own privacy notices. Do not assume
 that installing the Plugin changes the privacy terms of ChatGPT, Codex, a
 browser session, an API, or another connected tool.
