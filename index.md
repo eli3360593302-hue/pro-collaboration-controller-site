@@ -1,9 +1,9 @@
 ---
 layout: home
-title: Collaboration Controller
+title: Pro Collaboration Controller
 ---
 
-# Collaboration Controller
+# Pro Collaboration Controller
 
 ## 让 Codex 不只完成一步，而是把整个任务推进到结果
 
@@ -22,7 +22,7 @@ Codex 很擅长写代码、研究问题、修改文件和处理具体任务。
 - 决定什么时候继续，什么时候停止；
 - 长任务隔一段时间后，再回来重新接上。
 
-**Collaboration Controller 把这部分工作交给 Codex 自己管理。**
+**Pro Collaboration Controller 把这部分工作交给 Codex 自己管理。**
 
 你负责告诉 Codex：
 
@@ -478,7 +478,7 @@ Controller 的作用是确保这些验收步骤真正发生，而不是用一句
 
 **Codex 原本很擅长完成工作。**
 
-**Collaboration Controller 让 Codex也开始管理工作。**
+**Pro Collaboration Controller 让 Codex 也开始管理工作。**
 
 你告诉它最终要什么。
 

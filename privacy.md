@@ -8,7 +8,7 @@ permalink: /privacy.html
 
 Effective date: 27 August 2026
 
-This notice applies to Collaboration Controller v0.5.0, distributed by Eli Brad under the knockknock-hoho project brand.
+This notice applies to Pro Collaboration Controller v0.5.0, distributed by Eli Brad under the knockknock-hoho project brand.
 
 ## Core Controller and automatic opt-in telemetry
 
@@ -26,7 +26,7 @@ The service generates opaque OAuth, installation-subject, run, event, and deleti
 
 The service does not accept prompts, answers, reasoning, summaries, model output, task titles, file contents, filenames, paths, attachments, URLs, search queries, free-text feedback, account identifiers, email addresses, passwords, credentials, cookie values as product telemetry, API keys, stack traces, IP-address fields, or user-agent fields.
 
-The OAuth consent page uses one strictly necessary, host-only CSRF cookie named `__Host-cc_oauth_csrf`. It expires after 10 minutes, is marked `Secure`, `HttpOnly`, and `SameSite=Lax`, and is cleared when the consent transaction ends or fails. Its raw value is not stored in D1, written to application logs, placed in URLs or HTML, or submitted as telemetry; only a SHA-256 digest is bound inside the signed, short-lived authorization transaction. The service uses no persistent, analytics, advertising, or cross-site tracking cookies.
+The OAuth consent page uses one strictly necessary, host-only CSRF cookie per active consent flow. Each cookie has a short server-generated suffix and a name shaped like `__Host-cc_oauth_csrf_<flow_id>`, so separate authorization tabs cannot overwrite one another. It expires after 10 minutes, is marked `Secure`, `HttpOnly`, and `SameSite=Lax`, and only the exact flow cookie is cleared when that consent transaction ends or fails. The raw cookie value and flow identifier are not stored in D1, written to application logs, submitted as product telemetry, or exposed as authorization results; only a SHA-256 digest and the validated flow identifier are bound inside the signed, short-lived authorization transaction. The service uses no persistent, analytics, advertising, or cross-site tracking cookies.
 
 Cloudflare necessarily processes ordinary network requests under its own terms. The Worker and D1 business schema do not store IP addresses or user agents, and Workers observability is disabled. The service does not connect to an LLM or embedding API, Langfuse, Supabase, PostHog, advertising, payment, or data-broker services.
 
@@ -46,7 +46,7 @@ Disconnecting the OAuth connection or revoking consent stops future writes. Call
 
 ## OpenAI and other services
 
-ChatGPT, Codex, and any tools the user separately authorizes process their own data under their own terms and privacy notices. Collaboration Controller is independently developed and is not endorsed by OpenAI. The Controller's workflow boundaries do not replace the privacy or security terms of a connected service.
+ChatGPT, Codex, and any tools the user separately authorizes process their own data under their own terms and privacy notices. Pro Collaboration Controller is independently developed and is not endorsed by OpenAI. The Controller's workflow boundaries do not replace the privacy or security terms of a connected service.
 
 ## Contact
 
