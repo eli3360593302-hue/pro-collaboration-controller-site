@@ -8,13 +8,15 @@ permalink: /privacy.html
 
 Effective date: 27 August 2026
 
-This notice applies to Pro Collaboration Controller v0.5.0, distributed by Eli Brad under the knockknock-hoho project brand.
+This notice applies to Pro Collaboration Controller v0.5.x, distributed by Eli Brad under the knockknock-hoho project brand.
 
 ## Core Controller and automatic opt-in telemetry
 
 The Controller's Skills remain usable when publisher telemetry is unavailable. The Plugin also connects to an OAuth-protected MCP telemetry service hosted on Cloudflare Workers with an EU-jurisdiction Cloudflare D1 database.
 
-Installing the Plugin is not telemetry consent. The first connection displays a one-time consent page. It creates a pseudonymous telemetry subject without asking for a publisher account, email address, password, or payment. After consent, the Controller automatically makes at most one `telemetry.begin_run` call and one immediate `telemetry.commit_run` call after a root task has reached an immutable terminal decision. It never retries, queues, backfills, or delays the task result. Missing, declined, rejected, malformed, or unavailable telemetry does not change Controller routing, acceptance, or the user-visible result.
+Installing the Plugin is not telemetry consent. The first connection occurs only when the user explicitly opens telemetry setup or asks to connect it; an ordinary task never initializes OAuth or unexpectedly displays the consent page at completion. The one-time page creates a pseudonymous telemetry subject without asking for a publisher account, email address, password, or payment. After that explicit connection is complete and its ready state remains recoverable, the Controller automatically makes at most one `telemetry.begin_run` call and one immediate `telemetry.commit_run` call after a root task has reached an immutable terminal decision. Visible tools alone do not prove consent or readiness. It never retries, queues, backfills, or delays the task result. Missing, declined, rejected, malformed, unavailable, or unproven telemetry does not change Controller routing, acceptance, or the user-visible result.
+
+The legacy v0.5.0 telemetry resource and the v0.5.1 resource are isolated release lanes. Moving to v0.5.1 requires a separate explicit connection to its exact OAuth resource; legacy tokens and connection receipts cannot be reused across lanes. An accountless reconnect creates a new pseudonymous subject and does not link the two subjects.
 
 ## Data collected after consent
 
@@ -25,6 +27,8 @@ The service generates opaque OAuth, installation-subject, run, event, and deleti
 ## Data not accepted as product telemetry
 
 The service does not accept prompts, answers, reasoning, summaries, model output, task titles, file contents, filenames, paths, attachments, URLs, search queries, free-text feedback, account identifiers, email addresses, passwords, credentials, cookie values as product telemetry, API keys, stack traces, IP-address fields, or user-agent fields.
+
+Exact ChatGPT model labels, model-selector candidate lists, hard-limit message text, and reset timestamps used by the local Controller are not uploaded. Connected telemetry may record only the coarse route `NONPRO_CHATGPT_FALLBACK` and a coarse qualifying reason enum; it cannot receive the selected model name.
 
 The OAuth consent page uses one strictly necessary, host-only CSRF cookie per active consent flow. Each cookie has a short server-generated suffix and a name shaped like `__Host-cc_oauth_csrf_<flow_id>`, so separate authorization tabs cannot overwrite one another. It expires after 10 minutes, is marked `Secure`, `HttpOnly`, and `SameSite=Lax`, and only the exact flow cookie is cleared when that consent transaction ends or fails. The raw cookie value and flow identifier are not stored in D1, written to application logs, submitted as product telemetry, or exposed as authorization results; only a SHA-256 digest and the validated flow identifier are bound inside the signed, short-lived authorization transaction. The service uses no persistent, analytics, advertising, or cross-site tracking cookies.
 

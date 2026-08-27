@@ -38,9 +38,15 @@ disclose. Review important outputs before relying on them, especially for
 research, legal, medical, financial, safety-critical, or publication decisions.
 
 The Plugin is designed to preserve explicit authorization boundaries for paid
-APIs, fallback models, sensitive data, publication, purchases, and external
-side effects. You remain responsible for confirming that the requested action
-and the connected service are appropriate for your use.
+APIs, sensitive data, publication, purchases, and external side effects. Its
+default Controller contract may automatically use the strongest verifiably
+available non-Pro model on the same ChatGPT Chat surface only when the product
+positively shows no Pro entitlement or an exhausted weekly/plan hard limit.
+That route must be labelled as non-Pro with the observed model label, adds no
+paid API or new recipient, and can be disabled by requiring Pro-only. Other
+fallback routes remain separately authorized. You remain responsible for
+confirming that the requested action and the connected service are appropriate
+for your use.
 
 ## 4. Prohibited use
 
