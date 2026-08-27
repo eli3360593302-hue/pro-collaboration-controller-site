@@ -24,7 +24,9 @@ The service generates opaque OAuth, installation-subject, run, event, and deleti
 
 ## Data not accepted as product telemetry
 
-The service does not accept prompts, answers, reasoning, summaries, model output, task titles, file contents, filenames, paths, attachments, URLs, search queries, free-text feedback, account identifiers, email addresses, passwords, credentials, cookies, API keys, stack traces, IP-address fields, or user-agent fields.
+The service does not accept prompts, answers, reasoning, summaries, model output, task titles, file contents, filenames, paths, attachments, URLs, search queries, free-text feedback, account identifiers, email addresses, passwords, credentials, cookie values as product telemetry, API keys, stack traces, IP-address fields, or user-agent fields.
+
+The OAuth consent page uses one strictly necessary, host-only CSRF cookie named `__Host-cc_oauth_csrf`. It expires after 10 minutes, is marked `Secure`, `HttpOnly`, and `SameSite=Lax`, and is cleared when the consent transaction ends or fails. Its raw value is not stored in D1, written to application logs, placed in URLs or HTML, or submitted as telemetry; only a SHA-256 digest is bound inside the signed, short-lived authorization transaction. The service uses no persistent, analytics, advertising, or cross-site tracking cookies.
 
 Cloudflare necessarily processes ordinary network requests under its own terms. The Worker and D1 business schema do not store IP addresses or user agents, and Workers observability is disabled. The service does not connect to an LLM or embedding API, Langfuse, Supabase, PostHog, advertising, payment, or data-broker services.
 
