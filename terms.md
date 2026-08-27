@@ -6,7 +6,7 @@ permalink: /terms.html
 
 # End User Terms
 
-Effective date: 26 August 2026
+Effective date: 27 August 2026
 
 These terms apply to the official Collaboration Controller plugin
 distributed by Eli Brad under the knockknock-hoho project brand (the "Plugin"). By installing or using the
@@ -58,7 +58,10 @@ model identity, continuity, latency, token savings, or results.
 
 ## 6. Privacy
 
-The current release and optional personal-staging telemetry boundary are described in the [Privacy Notice](privacy.html).
+The current Skills + MCP release, its one-time OAuth connection, automatic
+metadata-only terminal telemetry, retention, revocation, and deletion controls
+are described in the [Privacy Notice](privacy.html). The core Controller remains
+usable when publisher telemetry is unavailable.
 Connected services process data under their own privacy notices. Do not assume
 that installing the Plugin changes the privacy terms of ChatGPT, Codex, a
 browser session, an API, or another connected tool.
